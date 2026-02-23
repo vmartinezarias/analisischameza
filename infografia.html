@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Conectividad Ecológica en Chámeza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'eco-green': '#2F5233',
+                        'eco-light': '#76B041',
+                        'eco-dark': '#1E3622',
+                        'alert-red': '#D9534F',
+                        'earth-brown': '#8D6E63',
+                        'water-blue': '#4FC3F7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f3f4f6;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2F5233, #76B041);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto my-8 p-4 sm:p-8 space-y-8">
+
+        <!-- Header -->
+        <header class="text-center space-y-4 py-12 bg-white rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-eco-dark via-eco-light to-eco-dark"></div>
+            <h2 class="text-eco-light font-mono text-sm tracking-widest uppercase">Municipio de Chámeza, Casanare</h2>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                Análisis de <span class="gradient-text">Conectividad Ecológica</span><br>y Huella Humana
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-600 text-lg">
+                Evaluación de la presión antrópica y corredores funcionales para la conservación de la biodiversidad.
+            </p>
+        </header>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+            <!-- Methodology Sidebar -->
+            <div class="md:col-span-4 space-y-6">
+                <!-- Methods Card -->
+                <div class="glass-panel rounded-2xl p-6 h-full">
+                    <h3 class="text-xl font-bold text-eco-dark mb-4 flex items-center gap-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        Metodología
+                    </h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-eco-light/20 text-eco-dark font-bold p-1 rounded text-xs mt-0.5">01</span>
+                            <div>
+                                <strong class="block text-gray-900">Huella Humana (GHM v3)</strong>
+                                <span class="text-gray-500">Análisis temporal 1990-2020 usando Google Earth Engine. Resolución 300m.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-eco-light/20 text-eco-dark font-bold p-1 rounded text-xs mt-0.5">02</span>
+                            <div>
+                                <strong class="block text-gray-900">Conectividad (Omniscape)</strong>
+                                <span class="text-gray-500">Modelado de flujo de corriente y resistencia del paisaje.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-eco-light/20 text-eco-dark font-bold p-1 rounded text-xs mt-0.5">03</span>
+                            <div>
+                                <strong class="block text-gray-900">Índices Espectrales</strong>
+                                <span class="text-gray-500">Sentinel-2 (NDVI, SAVI, EVI) para evaluar calidad de hábitat.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Species Section -->
+            <div class="md:col-span-8">
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                    <h3 class="text-xl font-bold text-eco-dark mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Especies Focales y Resistencia
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Species 1 -->
+                        <div class="border border-gray-100 rounded-xl p-4 hover:border-eco-light transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded-bl-lg">EN (En Peligro)</div>
+                            <h4 class="font-bold text-lg text-gray-900">Perdiz Montañera</h4>
+                            <p class="text-xs text-gray-500 italic mb-2">Odontophorus strophium</p>
+                            <div class="text-sm text-gray-600">
+                                <span class="block">🌿 Hábitat Óptimo: Bosque Denso Alto</span>
+                                <span class="block text-red-500">🚫 Barrera: Pastos y Cultivos</span>
+                            </div>
+                        </div>
+                        <!-- Species 2 -->
+                        <div class="border border-gray-100 rounded-xl p-4 hover:border-eco-light transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-bl-lg">VU (Vulnerable)</div>
+                            <h4 class="font-bold text-lg text-gray-900">Oso Andino</h4>
+                            <p class="text-xs text-gray-500 italic mb-2">Tremarctos ornatus</p>
+                            <div class="text-sm text-gray-600">
+                                <span class="block">🏔️ Hábitat Óptimo: Bosque Montano/Páramo</span>
+                                <span class="block text-blue-500">💧 Cruza ríos (buen nadador)</span>
+                            </div>
+                        </div>
+                        <!-- Species 3 -->
+                        <div class="border border-gray-100 rounded-xl p-4 hover:border-eco-light transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-bl-lg">VU (Vulnerable)</div>
+                            <h4 class="font-bold text-lg text-gray-900">Mono Churuco</h4>
+                            <p class="text-xs text-gray-500 italic mb-2">Lagothrix lagotricha</p>
+                            <div class="text-sm text-gray-600">
+                                <span class="block">🌳 Estrictamente Arborícola</span>
+                                <span class="block text-red-500">🚫 Barrera: Áreas abiertas (>85 resistencia)</span>
+                            </div>
+                        </div>
+                        <!-- Species 4 -->
+                        <div class="border border-gray-100 rounded-xl p-4 hover:border-eco-light transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded-bl-lg">VU (Vulnerable)</div>
+                            <h4 class="font-bold text-lg text-gray-900">Periquito Aliamarillo</h4>
+                            <p class="text-xs text-gray-500 italic mb-2">Pyrrhura calliptera</p>
+                            <div class="text-sm text-gray-600">
+                                <span class="block">🦜 Depende de árboles maduros</span>
+                                <span class="block text-orange-500">⚠️ Sensible a fragmentación</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Human Footprint Analysis -->
+        <section class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4">Resultados: Huella Humana (1990-2020)</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- High Impact -->
+                <div class="space-y-3">
+                    <div class="h-2 w-full bg-red-500 rounded-full"></div>
+                    <h4 class="font-bold text-lg text-red-600">Alta Presión (Núcleo)</h4>
+                    <p class="text-sm text-gray-600">Zonas urbanas y periurbanas consolidadas. Foco de fragmentación.</p>
+                    <ul class="text-sm font-mono bg-red-50 p-3 rounded-lg text-red-800">
+                        <li>• Cabecera Municipal</li>
+                        <li>• Centro Norte</li>
+                        <li>• Centro Sur</li>
+                        <li>• Barriales</li>
+                    </ul>
+                </div>
+
+                <!-- Medium Impact -->
+                <div class="space-y-3">
+                    <div class="h-2 w-full bg-orange-400 rounded-full"></div>
+                    <h4 class="font-bold text-lg text-orange-600">Presión en Expansión</h4>
+                    <p class="text-sm text-gray-600">Cinturón de expansión. Aceleración reciente de la intervención.</p>
+                    <ul class="text-sm font-mono bg-orange-50 p-3 rounded-lg text-orange-800">
+                        <li>• Chuyagua</li>
+                        <li>• Teguita Baja</li>
+                        <li>• Brisas del Tonce</li>
+                        <li>• Providencia</li>
+                    </ul>
+                </div>
+
+                <!-- Low Impact -->
+                <div class="space-y-3">
+                    <div class="h-2 w-full bg-green-500 rounded-full"></div>
+                    <h4 class="font-bold text-lg text-green-700">Presión Incipiente</h4>
+                    <p class="text-sm text-gray-600">Niveles bajos pero con tendencia al incremento gradual.</p>
+                    <ul class="text-sm font-mono bg-green-50 p-3 rounded-lg text-green-800">
+                        <li>• Gurubita</li>
+                        <li>• Jordán Bajo/Alto</li>
+                        <li>• Teguita Alta</li>
+                        <li>• La Palma</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connectivity Map Concept -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-eco-dark text-white rounded-2xl p-8 flex flex-col justify-center">
+                <h3 class="text-2xl font-bold mb-4">Áreas Críticas de Conectividad</h3>
+                <p class="text-gray-300 mb-6">
+                    A pesar de las diferencias entre especies, los modelos identificaron un conjunto de veredas que funcionan como <strong>"cuellos de botella"</strong> o corredores universales para la fauna en la región.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20">San Rafael</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20">Morguí</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20">Brisas del Tonce</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20">Jordán Bajo</span>
+                    <span class="px-3 py-1 bg-white/10 rounded-full text-sm border border-white/20">Jordán Alto</span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 border border-gray-100 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Conclusiones Clave</h3>
+                    <ul class="space-y-4 mt-4">
+                        <li class="flex gap-3">
+                            <div class="min-w-6 h-6 rounded-full bg-eco-light flex items-center justify-center text-white text-xs font-bold">✓</div>
+                            <p class="text-sm text-gray-600">Existe una <strong>redundancia funcional</strong>: diferentes especies usan los mismos corredores estructurales.</p>
+                        </li>
+                        <li class="flex gap-3">
+                            <div class="min-w-6 h-6 rounded-full bg-eco-light flex items-center justify-center text-white text-xs font-bold">✓</div>
+                            <p class="text-sm text-gray-600">Las áreas de conectividad coinciden con zonas de <strong>huella humana intermedia</strong>, lo que las hace vulnerables.</p>
+                        </li>
+                        <li class="flex gap-3">
+                            <div class="min-w-6 h-6 rounded-full bg-eco-light flex items-center justify-center text-white text-xs font-bold">✓</div>
+                            <p class="text-sm text-gray-600">Es necesario ampliar el estudio a especies con requerimientos ecológicos diferentes para no subestimar otros corredores.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-400 text-xs py-8 border-t border-gray-200">
+            <p>Basado en el informe técnico: "Análisis de la huella humana y conectividad ecológica en Chámeza".</p>
+            <p class="mt-2">Generado con HTML5 + Tailwind CSS.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
